@@ -1,0 +1,59 @@
+.btn {
+    @include btn;   
+}
+.pop-up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 10; 
+    transition: $transition;   
+    display: none;
+    &__container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    &__body {
+        margin: auto;
+        width: 500px;
+        background: $white;
+        text-align: center;
+        padding: 80px 50px;
+        position: relative;
+        border-radius: 10px;
+    }
+    h2 {
+        @include text ($ff, 2.6rem, 3rem, 700, $color-text);
+        margin-bottom: 25px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    input {
+        border: 0;
+        outline: 0;
+        padding: 15px;
+        background-color: $color-cards;
+        border-radius: 10px;
+        @include text ($ff, 1.6rem, 2rem, 400, $color-text);
+    }
+    button {
+        @include btn; 
+        cursor: pointer;      
+    }
+    &__close {
+        font-size: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+}
+.pop-up.active {
+    display: block;
+}
