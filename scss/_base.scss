@@ -13,7 +13,9 @@ html {
     padding: 25px 15px;
     margin-inline: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
 }
 body {
     font-family: $ff;
@@ -32,6 +34,9 @@ img {
 }
 ul {
     list-style: none;
+}
+section {
+    display: block;
 }
 .title {
     @include text($ff, 48px, 56px, 700, $color-text);

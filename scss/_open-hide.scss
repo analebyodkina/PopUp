@@ -1,0 +1,19 @@
+.show-hide-section {
+        text-align: center;
+    h2 {
+        @include text ($ff, 2.4rem, 3rem, 700, $color-text);
+        margin-bottom: 30px;
+    }
+    .btn {
+        @include btn;
+    }
+}
+
+.block {
+    box-shadow: 1px 1px 5px $color-primary;
+    padding: 20px;
+    max-width: 300px;
+}
+.content-hidden {
+    display: none;
+}

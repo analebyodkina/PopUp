@@ -1,5 +1,35 @@
-.btn {
-    @include btn;   
+.pop-up-section{
+    a {
+        @include btn;
+        background: transparent;
+        box-shadow: 0px 0px 3px $color-primary;
+        border: 0;
+        color: $color-text;
+        position: relative;
+        transition: all .35s;
+        span{
+            position: relative;
+            z-index: 2;
+        }
+        &:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $color-primary;
+            border-radius: 5px;
+            transition: all .35s;
+            transition: .3s ease-in-out;
+        }
+        &:hover{
+            color: $white;
+        } 
+        &:hover:after{
+            width: 100%;
+        }
+    } 
 }
 .pop-up {
     width: 100%;
