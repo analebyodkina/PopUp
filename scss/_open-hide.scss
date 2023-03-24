@@ -6,6 +6,7 @@
     }
     .btn {
         @include btn;
+        margin-bottom: 25px;
     }
 }
 

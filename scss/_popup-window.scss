@@ -39,8 +39,9 @@
     left: 0;
     background: rgba(0,0,0,0.8);
     z-index: 10; 
-    transition: $transition;   
-    display: none;
+    transition: .3s all ease-in-out;   
+    transform: translateY(-120%);
+    
     &__container {
         display: flex;
         width: 100%;
@@ -85,5 +86,5 @@
     }
 }
 .pop-up.active {
-    display: block;
+    transform: translateY(0%);
 }
