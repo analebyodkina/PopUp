@@ -14,10 +14,11 @@
 			<section class="pop-up-section">
 				<a href="#" class="btn" id="openPopUp"><span>Subscribe</span></a>
 				
-				<div class="pop-up" id="popUp">
+				<div class="pop-up" onclick="popup(this)"> 
+					<!-- вешаем вызов функции по клику на КАЖДУЮ кнопочку, кот должна открывать модальное окно -->
 					<div class="pop-up__container">
 						<div class="pop-up__body">
-							<h2>Subscribe</h2>
+							<h2 class="pop-up__title">Subscribe</h2>
 							<form>
 								<input type="text" placeholder="Enter your name">
 								<input type="email" placeholder="Enter your email">

@@ -1,25 +1,35 @@
-// ЧАСТЬ 1. ПОП-АП
+// ЧАСТЬ 1. ПОП-АП или Модальное окно
 
-const openPopUp = document.getElementById('openPopUp');
+
 const popUp = document.getElementById('popUp')
 
-
-// на кнопочку открытия вешаем метод адлистенер. он будет отслеживать нажаите по клику
-// и выполнять функцию
+// функция, которую мы вызывем в html по клику
+// н вешаем метод адлистенер. он будет отслеживать нажатие по клику
+// и выполнять функцию е.
 // е нужно, т.к сама кнока (ссылка), при нажтии куда-то ведет. ф-я, чтобы это убрать
-openPopUp.addEventListener('click', function(e){
-  e.preventDefault();
-  popUp.classList.add('active'); 
-  // чтобы закрывалось окно при нажатии на черное
-  popUp.addEventListener('click', function(){
-    popUp.classList.remove('active');   
-  }) 
-  const closePopUp = document.getElementById('closePopUp');
-  closePopUp.addEventListener('click', () => {
-    popUp.classList.remove('active');
-  } )
-})
+const popUp = document.getElementById('popUp')
 
+function popup(){
+
+      // это чтобы закрывался бургер, открывался попап
+      document.getElementById('navUl').classList.remove("_active");
+      
+      popUp.classList.add('active');
+      return false;
+}
+
+// чтобы закрывалось окно при нажатии на черное
+popUp.addEventListener('click', function(){
+    popUp.classList.remove('active');
+});
+const closePopUp = document.getElementById('closePopUp');
+closePopUp.addEventListener('click', () => {
+    popUp.classList.remove('active');
+});
+
+popUp.querySelector('.pop-up__body').addEventListener('click', function(event){  
+  event.stopPropagation();
+})
 // делаем то же самое для кнопочки закрытия попапа. сначала нахродим ее,
 // отслеживаем нажатие и при нажатии убираем класс эктив
 
